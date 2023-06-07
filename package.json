@@ -12,7 +12,7 @@
     "list",
     "items"
   ],
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -37,6 +37,8 @@
   },
   "scripts": {
     "build": "rm -rf dist && babel NODE_ENV=production ./package --out-dir dist --copy-files",
+    "prepublish": "npm-auto-version",
+        "postpublish": "git push origin --tags",
     "build:tsc": "rimraf dist && tsc && babel ./package --out-dir dist --extensions \".tsx,.ts\" --copy-files"
   },
   "devDependencies": {
