@@ -6,10 +6,7 @@
             "dom.iterable",
             "esnext"
         ],
-        "declaration": false,
-        "allowJs": false,
-        "emitDeclarationOnly": false,
-        "declarationMap": false,
+        "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -25,5 +22,5 @@
     },
     "include": [
         "package"
-, "index.d.ts"    ]
+    ]
 }
