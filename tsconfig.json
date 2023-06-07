@@ -25,5 +25,5 @@
     },
     "include": [
         "package"
-, "package/index.d.ts"    ]
+, "index.d.ts"    ]
 }
