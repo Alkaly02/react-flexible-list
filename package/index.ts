@@ -1,3 +1,3 @@
 import GridList from './components/GridList';
 
-export { GridList }
+export default GridList
