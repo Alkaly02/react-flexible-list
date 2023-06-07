@@ -1,8 +1,8 @@
 # react-flexible-list
 # GridList
 
-[![NPM Version](https://img.shields.io/npm/v/gridlist.svg)](https://www.npmjs.com/package/gridlist)
-[![License](https://img.shields.io/npm/l/gridlist.svg)](https://github.com/your-username/gridlist/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/gridlist.svg)]([https://www.npmjs.com/package/gridlist](https://www.npmjs.com/package/react-flexible-list))
+[![License](https://img.shields.io/npm/l/gridlist.svg)](https://github.com/alkaly02/gridlist/blob/main/LICENSE)
 
 ## Installation
 
