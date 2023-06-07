@@ -1,25 +1,17 @@
-# react-flexible-list
-# GridList
 
-[![NPM Version](https://img.shields.io/npm/v/gridlist.svg)](https://www.npmjs.com/package/react-flexible-list)
-[![License](https://img.shields.io/npm/l/gridlist.svg)](https://github.com/alkaly02/gridlist/blob/main/LICENSE)
+[![My Skills](https://skills.thijs.gg/icons?i=react,typescript,css)](https://skills.thijs.gg)
+## react-flexible-list
 
-## Installation
+### Installation :rocket:  :rocket:  :rocket: 
 
-Use npm to install the package:
-```shell
-npm install react-flexible-list
+```
+  npm install react-flexible-list
+```
 or
-```shell
-npm i react-flexible-list
-
-Use yarn to install the package:
-```shell
-yarn add gridlist
-
-
-## Usage
-
+```
+  yarn add react-flexible-list
+```
+### Usage
 ```jsx
 import React from 'react';
 import { GridList } from 'react-flexible-list';
@@ -36,16 +28,18 @@ const MyComponent = () => {
     />
   );
 };
-
 export default MyComponent;
+```
 
-## Props
 
-| Prop Name     | Type     | Description                                      |
-| ------------- | -------- | ------------------------------------------------ |
-| skeleton      | Function | Renders the skeleton element for the GridList.   |
-| resourceData  | Array    | Array of data items to be rendered in the GridList. |
-| resourceItem  | Function | Renders each individual item in the GridList.     |
-| resourceName | String   | Name of the resource being displayed in the GridList. |
-| gap           | Number   | Gap (in pixels) between each item in the GridList. |
-| cardWidth     | Number   | Width (in pixels) of each card in the GridList.   |
+| Props | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `skeleton`      | `React element` | Renders the skeleton element for the GridList. item to fetch |
+|`resourceData`| `(string, object,number)Array`| Array of data items to be rendered in the GridList.|
+| `resourceItem`| `React element` | **Required** Renders each individual item in the GridList.|
+|`resourceName`| `String`| ***Required***: If you want to get data passed to each item in `resourceItem`|
+|`gap`| `Number`| Gap (in pixels) between each item in the GridList.|
+|`cardWidth`| `Number`| Width (in pixels) of each card in the GridList.|
+
+
+
