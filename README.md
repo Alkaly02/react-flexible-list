@@ -2,16 +2,13 @@
 [![My Skills](https://skills.thijs.gg/icons?i=react,typescript,css)](https://skills.thijs.gg)
 ## react-flexible-list
 
-### Installation 
-| [top](#travel--places) | :artificial_satellite: | `:artificial_satellite:` | :rocket: | `:rocket:` | [top](#table-of-contents) |
+### Installation :rocket:  :rocket:  :rocket: 
 
 ```http
   npm install react-flexible-list
-```
 or
 ```http
   yarn add react-flexible-list
-```
 
 ### Usage
 ```jsx
