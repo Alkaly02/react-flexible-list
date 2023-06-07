@@ -4,12 +4,13 @@
 
 ### Installation :rocket:  :rocket:  :rocket: 
 
-```http
+```
   npm install react-flexible-list
+```
 or
-```http
+```
   yarn add react-flexible-list
-
+```
 ### Usage
 ```jsx
 import React from 'react';
