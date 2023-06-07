@@ -34,6 +34,7 @@ export default MyComponent;
 
 | Props | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
+|`isLoading`| `Boolean`| Allows us to show skeletons when fetching data|
 | `skeleton`      | `React element` | Renders the skeleton element for the GridList. item to fetch |
 |`resourceData`| `(string, object,number)Array`| Array of data items to be rendered in the GridList.|
 | `resourceItem`| `React element` | **Required** Renders each individual item in the GridList.|
