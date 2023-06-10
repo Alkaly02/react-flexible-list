@@ -5,7 +5,7 @@ import ResourceDataMap from './ResourceDataMap'
 
 interface IgridList {
     isLoading?: Boolean,
-    resourceItem: React.FC,
+    resourceItem: React.FC<any>,
     resourceName: String,
     resourceData: (string | object | number)[],
     skeleton?: React.ElementType,
