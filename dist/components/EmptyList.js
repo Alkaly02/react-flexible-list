@@ -3,14 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _jsxRuntime = require("react/jsx-runtime");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-const EmptyList = () => {
-  return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-    children: "EmptyList"
-  });
+exports["default"] = void 0;
+/** @jsx React.DOM */
+
+var EmptyList = function EmptyList() {
+  return React.DOM("div", null, "There is no data");
 };
-var _default = EmptyList;
-exports.default = _default;
+var _default = exports["default"] = EmptyList;

@@ -12,14 +12,14 @@
     "list",
     "items"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Alkaly02/react-flexible-list"
-},
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -29,6 +29,7 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
+    "babel-preset-react": "^6.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -37,19 +38,20 @@
   },
   "scripts": {
     "build": "rm -rf dist && babel NODE_ENV=production ./package --out-dir dist --copy-files",
-    "prepublish": "npm-auto-version",
-        "postpublish": "git push origin --tags",
-    "build:tsc": "rimraf dist && tsc --declaration false && babel ./package --out-dir dist --extensions \".tsx,.ts\" --copy-files"
+    "build:tsc": "rimraf dist && tsc --declaration false && npx babel ./package --out-dir dist --extensions \".tsx,.ts\" --copy-files"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.22.1",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
     "@babel/plugin-syntax-jsx": "^7.21.4",
     "@babel/plugin-syntax-typescript": "^7.21.4",
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
+    "babel": "^6.5.2",
     "babel-loader": "^9.1.2",
+    "babel-preset-env": "^1.7.0",
+    "jsx-loader": "^0.13.2",
     "webpack": "^5.85.0",
     "webpack-cli": "^5.1.1"
   },

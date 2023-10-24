@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Skeleton from './Skeleton'
 import EmptyList from './EmptyList'
 import ResourceDataMap from './ResourceDataMap'
@@ -16,22 +16,26 @@ interface IgridList {
 
 const GridList = ({
     isLoading = false,
-    resourceItem: ResourceItem,
-    resourceName,
+    resourceItem,
     resourceData = [],
     skeleton: LoadingSkeleton = Skeleton,
     emptyComponent: EmptyComponent = EmptyList,
     gap = 15,
     cardWidth = 250,
 }: IgridList) => {
+    const app: React.CSSProperties = {
+        minHeight: "300px",
+        padding: 10
+    }
     const container: React.CSSProperties = {
         display: 'grid',
         gridTemplateColumns: `repeat(auto-fill,minmax(${cardWidth}px,1fr))`,
         gap: gap + 'px',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        padding: 10
     }
     return (
-        <>
+        <div style={app}>
             {
                 isLoading ?
                     <div style={container}>
@@ -42,15 +46,19 @@ const GridList = ({
                     :
                     resourceData.length ?
                         <div style={container}>
-                            <ResourceDataMap
-                                resourceData={resourceData}
-                                resourceItem={ResourceItem}
-                                resourceName={`${resourceName}`}
-                            />
+                            {
+                                resourceData.map((resource, i) => {
+                                    console.log({ fromGrid: resource });
+
+                                    return <Fragment key={i}>
+                                        {resourceItem("rendreItem")}
+                                    </Fragment>
+                                })
+                            }
                         </div> :
                         <EmptyComponent />
             }
-        </>
+        </div>
     )
 }
 
