@@ -1,8 +1,8 @@
-import React from 'react'
+/** @jsx React.DOM */
 
 const EmptyList = () => {
   return (
-    <div>EmptyList</div>
+    <div>There is no data</div>
   )
 }
 

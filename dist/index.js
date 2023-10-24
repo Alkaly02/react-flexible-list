@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "GridList", {
   enumerable: true,
   get: function get() {
-    return _GridList.default;
+    return _GridList["default"];
   }
 });
 var _GridList = _interopRequireDefault(require("./components/GridList"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
