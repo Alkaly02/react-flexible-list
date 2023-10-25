@@ -17,6 +17,7 @@ var GridList = function GridList(_ref) {
     resourceItem = _ref.resourceItem,
     _ref$resourceData = _ref.resourceData,
     resourceData = _ref$resourceData === void 0 ? [] : _ref$resourceData,
+    Loader = _ref.loader,
     _ref$skeleton = _ref.skeleton,
     LoadingSkeleton = _ref$skeleton === void 0 ? _Skeleton["default"] : _ref$skeleton,
     _ref$emptyComponent = _ref.emptyComponent,
@@ -52,7 +53,7 @@ var GridList = function GridList(_ref) {
 
   return /*#__PURE__*/_react["default"].createElement("div", {
     style: app
-  }, isLoading ? LoadingSkeleton && /*#__PURE__*/_react["default"].createElement("div", {
+  }, isLoading ? Loader ? /*#__PURE__*/_react["default"].createElement(Loader, null) : /*#__PURE__*/_react["default"].createElement("div", {
     style: container
   }, [1, 2, 3, 4, 5, 6].map(function (item) {
     return /*#__PURE__*/_react["default"].createElement(LoadingSkeleton, {

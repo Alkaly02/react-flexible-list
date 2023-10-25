@@ -7,6 +7,7 @@ interface IgridList {
     isLoading?: Boolean,
     resourceItem: React.FC<any>,
     resourceData: (string | object | number)[],
+    loader?: React.ElementType,
     skeleton?: React.ElementType,
     emptyComponent?: React.ElementType,
     gap?: number,
@@ -22,6 +23,7 @@ const GridList = ({
     isLoading = false,
     resourceItem,
     resourceData = [],
+    loader: Loader,
     skeleton: LoadingSkeleton = Skeleton,
     emptyComponent: EmptyComponent = EmptyList,
     gap = 15,
@@ -50,7 +52,7 @@ const GridList = ({
         <div style={app}>
             {
                 isLoading ?
-                    LoadingSkeleton &&
+                    Loader ? <Loader /> :
                     <div style={container}>
                         {
                             [1, 2, 3, 4, 5, 6].map(item => <LoadingSkeleton key={item} />)
