@@ -24,21 +24,35 @@ var GridList = function GridList(_ref) {
     _ref$gap = _ref.gap,
     gap = _ref$gap === void 0 ? 15 : _ref$gap,
     _ref$cardWidth = _ref.cardWidth,
-    cardWidth = _ref$cardWidth === void 0 ? 250 : _ref$cardWidth;
+    cardWidth = _ref$cardWidth === void 0 ? 250 : _ref$cardWidth,
+    _ref$minHeight = _ref.minHeight,
+    minHeight = _ref$minHeight === void 0 ? 300 : _ref$minHeight,
+    _ref$px = _ref.px,
+    px = _ref$px === void 0 ? 10 : _ref$px,
+    _ref$py = _ref.py,
+    py = _ref$py === void 0 ? 10 : _ref$py,
+    _ref$mx = _ref.mx,
+    mx = _ref$mx === void 0 ? 0 : _ref$mx,
+    _ref$my = _ref.my,
+    my = _ref$my === void 0 ? 0 : _ref$my;
   var app = {
-    minHeight: "300px",
-    padding: 10
+    minHeight: "".concat(minHeight, "px"),
+    padding: "".concat(py, "px ").concat(px, "px"),
+    margin: "".concat(my, "px ").concat(mx, "px")
   };
   var container = {
     display: 'grid',
     gridTemplateColumns: "repeat(auto-fill,minmax(".concat(cardWidth, "px,1fr))"),
     gap: gap + 'px',
     overflowY: 'auto',
-    padding: 10
+    margin: 0,
+    padding: 0
+    // padding: 10
   };
+
   return /*#__PURE__*/_react["default"].createElement("div", {
     style: app
-  }, isLoading ? /*#__PURE__*/_react["default"].createElement("div", {
+  }, isLoading ? LoadingSkeleton && /*#__PURE__*/_react["default"].createElement("div", {
     style: container
   }, [1, 2, 3, 4, 5, 6].map(function (item) {
     return /*#__PURE__*/_react["default"].createElement(LoadingSkeleton, {
@@ -47,12 +61,9 @@ var GridList = function GridList(_ref) {
   })) : resourceData.length ? /*#__PURE__*/_react["default"].createElement("div", {
     style: container
   }, resourceData.map(function (resource, i) {
-    console.log({
-      fromGrid: resource
-    });
     return /*#__PURE__*/_react["default"].createElement(_react.Fragment, {
       key: i
-    }, resourceItem("rendreItem"));
+    }, resourceItem(resource));
   })) : /*#__PURE__*/_react["default"].createElement(EmptyComponent, null));
 };
 var _default = exports["default"] = GridList;
