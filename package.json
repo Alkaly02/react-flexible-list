@@ -1,6 +1,6 @@
 {
   "name": "react-flexible-list",
-  "description": "It helps you make responsive layout without any media query or using a third css library",
+  "description": "It helps you create a responsive layout without any media queries or using any third-party CSS library",
   "author": "Moussa Alkaly BADJI",
   "keywords": [
     "react",
