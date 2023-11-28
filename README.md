@@ -1,6 +1,6 @@
 
 [![My Skills](https://skills.thijs.gg/icons?i=react,typescript,css)](https://skills.thijs.gg)
-## react-flexible-list - v0.1.5
+## react-flexible-list - v1.0.0
 
 ### Installation :rocket:  :rocket:  :rocket: 
 
