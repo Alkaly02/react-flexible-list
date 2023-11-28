@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react'
 import Skeleton from './Skeleton'
 import EmptyList from './EmptyList'
-import ResourceDataMap from './ResourceDataMap'
+
+const isReactFC = (element: any): element is React.FC<any> => {
+    return typeof element === 'function'
+};
 
 interface IgridList {
     isLoading?: Boolean,
@@ -48,16 +51,20 @@ const GridList = ({
         padding: 0
         // padding: 10
     }
+
+    if (!resourceItem) throw new Error("resourceItem must be specified in GridList")
+    // if (!isReactFC(resourceItem)) throw new TypeError("resourceItem must be a React component")
+
     return (
         <div style={app}>
             {
                 isLoading ?
                     Loader ? <Loader /> :
-                    <div style={container}>
-                        {
-                            [1, 2, 3, 4, 5, 6].map(item => <LoadingSkeleton key={item} />)
-                        }
-                    </div>
+                        <div style={container}>
+                            {
+                                [1, 2, 3, 4, 5, 6].map(item => <LoadingSkeleton key={item} />)
+                            }
+                        </div>
                     :
                     resourceData.length ?
                         <div style={container}>
