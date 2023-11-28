@@ -12,9 +12,3 @@ export interface IGridList {
 }
 
 export declare const GridList: React.FC<IGridList>;
-
-// declare module "GridList" {
-//   export function fromAddress(p: any): Promise<any>;
-//   export function fromLatLng(p: any, b: any): Promise<any>;
-//   export function setApiKey(p: any): void;
-// }

@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-/** @jsx React.DOM */
-
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var EmptyList = function EmptyList() {
-  return React.DOM("div", null, "There is no data");
+  return /*#__PURE__*/_react["default"].createElement("div", null, "There is no data");
 };
 var _default = exports["default"] = EmptyList;

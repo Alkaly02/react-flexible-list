@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+import React from 'react'
 
 const EmptyList = () => {
   return (
