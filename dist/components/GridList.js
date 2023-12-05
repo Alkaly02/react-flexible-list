@@ -41,7 +41,6 @@ var GridList = function GridList(_ref) {
     my = _ref$my === void 0 ? 0 : _ref$my;
   var app = {
     minHeight: "".concat(minHeight, "px"),
-    padding: "".concat(py, "px ").concat(px, "px"),
     margin: "".concat(my, "px ").concat(mx, "px")
   };
   var container = {
@@ -50,7 +49,7 @@ var GridList = function GridList(_ref) {
     gap: gap + 'px',
     overflowY: 'auto',
     margin: 0,
-    padding: 0
+    padding: "".concat(py, "px ").concat(px, "px")
     // padding: 10
   };
 
