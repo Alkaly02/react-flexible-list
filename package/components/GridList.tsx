@@ -39,7 +39,6 @@ const GridList = ({
 }: IgridList) => {
     const app: React.CSSProperties = {
         minHeight: `${minHeight}px`,
-        padding: `${py}px ${px}px`,
         margin: `${my}px ${mx}px`
     }
     const container: React.CSSProperties = {
@@ -48,7 +47,7 @@ const GridList = ({
         gap: gap + 'px',
         overflowY: 'auto',
         margin: 0,
-        padding: 0
+        padding: `${py}px ${px}px`
         // padding: 10
     }
 
