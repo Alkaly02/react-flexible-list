@@ -19,15 +19,10 @@ describe('GridList component', () => {
     return render(<GridList {...defaultProps} {...props} />);
   };
 
-  // it('renders loading state correctly when isLoading is true', () => {
-  //   const { getByTestId } = renderGridList({ isLoading: true });
-  //   expect(getByTestId('loader')).toBeDefined();
-  // });
-
   it('renders skeleton placeholders correctly when isLoading is true and loader prop is not provided', () => {
     const { getAllByTestId } = renderGridList({ isLoading: true });
     const skeletonPlaceholders = getAllByTestId('skeleton');
-    expect(skeletonPlaceholders.length).toBe(6); // Assuming 6 skeleton placeholders
+    expect(skeletonPlaceholders.length).toBe(6);
   });
 
   it('renders actual data correctly when isLoading is false and resourceData is provided', () => {
@@ -38,7 +33,7 @@ describe('GridList component', () => {
     ];
     const { getByText } = renderGridList({ isLoading: false, resourceData: mockData, resourceItem: (item: any) => <p>{item.name}</p> });
     mockData.forEach(item => {
-      expect(getByText(item.name)).toBeInTheDocument(); // Apply toBeInTheDocument matcher here
+      expect(getByText(item.name)).toBeInTheDocument();
     });
   });
 
@@ -52,6 +47,6 @@ describe('GridList component', () => {
     expect(() => {
       renderGridList({ resourceItem: undefined });
     }).toThrow('resourceItem must be specified in GridList');
-    spy.mockRestore(); // Restore console.error to its original behavior after test
+    spy.mockRestore();
   });
 });
