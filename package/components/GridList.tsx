@@ -58,7 +58,7 @@ const GridList = ({
         <div style={app}>
             {
                 isLoading ?
-                    Loader ? <Loader /> :
+                    Loader ? <div data-testid="loader"><Loader /></div> :
                         <div style={container}>
                             {
                                 [1, 2, 3, 4, 5, 6].map(item => <LoadingSkeleton key={item} />)

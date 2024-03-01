@@ -2,7 +2,7 @@ import React from 'react'
 
 const EmptyList = () => {
   return (
-    <div>There is no data</div>
+    <div data-testid="empty">There is no data</div>
   )
 }
 
