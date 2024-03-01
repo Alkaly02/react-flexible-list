@@ -52,7 +52,6 @@ var GridList = function GridList(_ref) {
     padding: "".concat(py, "px ").concat(px, "px")
     // padding: 10
   };
-
   if (!resourceItem) throw new Error("resourceItem must be specified in GridList");
   // if (!isReactFC(resourceItem)) throw new TypeError("resourceItem must be a React component")
 

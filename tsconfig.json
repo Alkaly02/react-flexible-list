@@ -15,8 +15,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "declaration": true,
-    "jsx": "react-jsx",
-    "typeRoots": ["./custom-types", "node_modules/@types"]
+    "jsx": "react-jsx"
   },
-  "include": ["package", "index.d.ts"]
+  "include": ["packages", "index.d.ts"]
 }
