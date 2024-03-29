@@ -17,5 +17,6 @@
     "declaration": true,
     "jsx": "react-jsx"
   },
-  "include": ["packages", "index.d.ts"]
+  "include": ["packages", "index.d.ts"],
+  "exclude": ["__tests__"]
 }
